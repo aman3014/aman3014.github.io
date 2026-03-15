@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Bansal — Software Engineer & AI/ML Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fafafa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Header / Hero */
+        header {
+            margin-bottom: 80px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 24px;
+            font-weight: 400;
+        }
+
+        .bio {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            max-width: 600px;
+            margin-bottom: 32px;
+        }
+
+        nav {
+            display: flex;
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+            transition: border-color 0.2s;
+        }
+
+        nav a:hover {
+            border-bottom-color: #333;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 80px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .date {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        /* Projects */
+        .project {
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .project:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .project-title {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .project-title a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid #ddd;
+            transition: border-color 0.2s;
+        }
+
+        .project-title a:hover {
+            border-bottom-color: #333;
+        }
+
+        .project-desc {
+            color: #666;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #555;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        /* Timeline */
+        .timeline-item {
+            margin-bottom: 36px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            background: #333;
+            border-radius: 50%;
+        }
+
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 24px;
+            width: 2px;
+            height: calc(100% + 24px);
+            background: #ddd;
+        }
+
+        /* Skills */
+        .skill-group {
+            margin-bottom: 24px;
+        }
+
+        .skill-label {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        /* Contact */
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .contact-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 2px;
+            transition: border-color 0.2s;
+        }
+
+        .contact-links a:hover {
+            border-bottom-color: #333;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .container {
+                padding: 40px 16px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .tagline {
+                font-size: 16px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aman Bansal</h1>
+            <p class="tagline">Software Engineer · AI/ML Specialist</p>
+            <p class="bio">
+                Building at the intersection of software engineering and AI/ML. Currently at Microsoft AI with experience across full-stack development, quantum computing, and machine learning systems. EPFL Excellence Fellow with a passion for solving complex problems and mentoring the next generation.
+            </p>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#timeline">Timeline</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About</h2>
+            <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">
+                I'm a software engineer based in London with a background in computer science from <strong>École Polytechnique Fédérale de Lausanne (EPFL)</strong>. I'm passionate about building scalable systems, exploring emerging technologies like quantum computing, and making complex ideas accessible.
+            </p>
+            <p style="color: #555; line-height: 1.8;">
+                When I'm not coding, you'll find me teaching, contributing to open-source projects, or exploring the latest developments in AI and distributed systems.
+            </p>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline">
+            <h2>Timeline</h2>
+
+            <div class="timeline-item">
+                <h3>Microsoft AI</h3>
+                <p class="subtitle">Software Engineer</p>
+                <p class="date">Present</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>École Polytechnique Fédérale de Lausanne</h3>
+                <p class="subtitle">Teaching Assistant · Bachelor's Degree</p>
+                <p class="date">2018–2021</p>
+                <p style="color: #666; font-size: 14px;">
+                    Taught Linear Algebra, Discrete Mathematics, and Object-Oriented Programming.
+                    GPA: 5.7/6.0 · EPFL Excellence Fellowship recipient
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <div class="project">
+                <div class="project-title">
+                    <a href="#">Qiskit Advocate</a>
+                </div>
+                <p class="project-desc">
+                    Recognized advocate for IBM's Qiskit quantum computing framework. Contributed to quantum computing education and research.
+                </p>
+                <div class="tags">
+                    <span class="tag">Quantum Computing</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Open Source</span>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-title">
+                    <a href="#">Teaching & Mentorship</a>
+                </div>
+                <p class="project-desc">
+                    Developed and delivered educational content for core CS courses. Mentored students in algorithms, programming paradigms, and software design.
+                </p>
+                <div class="tags">
+                    <span class="tag">Education</span>
+                    <span class="tag">Mentoring</span>
+                    <span class="tag">Computer Science</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+
+            <div class="skill-group">
+                <span class="skill-label">Languages</span>
+                <div class="skills-list">
+                    <span class="tag">Python</span>
+                    <span class="tag">JavaScript/TypeScript</span>
+                    <span class="tag">C/C++</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Java</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <span class="skill-label">AI/ML & Quantum</span>
+                <div class="skills-list">
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Quantum Computing</span>
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">TensorFlow</span>
+                    <span class="tag">PyTorch</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <span class="skill-label">Tools & Frameworks</span>
+                <div class="skills-list">
+                    <span class="tag">Git</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">Kubernetes</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">React</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <span class="skill-label">Languages (Natural)</span>
+                <div class="skills-list">
+                    <span class="tag">English</span>
+                    <span class="tag">Hindi</span>
+                    <span class="tag">French</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-links">
+                <a href="https://linkedin.com/in/aman3014" target="_blank">LinkedIn</a>
+                <a href="https://github.com/aman3014" target="_blank">GitHub</a>
+                <a href="mailto:hello@example.com">Email</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Aman Bansal. Built with clean design and hosted on GitHub Pages.</p>
+        </footer>
+    </div>
+</body>
+</html>
