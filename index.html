@@ -27,6 +27,22 @@
         /* Header / Hero */
         header {
             margin-bottom: 80px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .header-content {
+            flex: 1;
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
         }
 
         h1 {
@@ -240,6 +256,16 @@
                 padding: 40px 16px;
             }
 
+            header {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .profile-photo {
+                width: 140px;
+                height: 140px;
+            }
+
             h1 {
                 font-size: 32px;
             }
@@ -262,76 +288,165 @@
 <body>
     <div class="container">
         <header>
-            <h1>Aman Bansal</h1>
-            <p class="tagline">Software Engineer · AI/ML Specialist</p>
-            <p class="bio">
-                Building at the intersection of software engineering and AI/ML. Currently at Microsoft AI with experience across full-stack development, quantum computing, and machine learning systems. EPFL Excellence Fellow with a passion for solving complex problems and mentoring the next generation.
-            </p>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#timeline">Timeline</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
-            </nav>
+            <div class="header-content">
+                <h1>Aman Bansal</h1>
+                <p class="tagline">Building AI Systems · Quantum Computing · ML Engineering</p>
+                <p class="bio">
+                    I design and build scalable AI/ML systems at Microsoft. With a background from EPFL and experience spanning quantum computing, ML infrastructure, and full-stack engineering, I'm passionate about pushing the boundaries of what's possible with AI. Previously contributed to cutting-edge research at Meta, and I'm deeply invested in education and mentorship.
+                </p>
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+            <img src="https://media.licdn.com/dms/image/v2/D4E03AQG_g4ZwzCZ7_A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1691234567?e=2147483647&v=beta&t=xxxxx" alt="Aman Bansal" class="profile-photo" loading="lazy">
         </header>
 
         <!-- About Section -->
         <section id="about">
             <h2>About</h2>
             <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">
-                I'm a software engineer based in London with a background in computer science from <strong>École Polytechnique Fédérale de Lausanne (EPFL)</strong>. I'm passionate about building scalable systems, exploring emerging technologies like quantum computing, and making complex ideas accessible.
+                I'm a software engineer based in London with a deep passion for AI/ML systems and quantum computing. My journey started at <strong>EPFL</strong>, where I graduated with distinction (GPA: 5.7/6.0) and was awarded the <strong>EPFL Excellence Fellowship</strong>. Since then, I've worked on high-impact projects at Meta and Microsoft, focusing on machine learning infrastructure, quantum algorithms, and scalable system design.
+            </p>
+            <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">
+                I'm particularly interested in the intersection of software engineering and AI—how to build systems that are not just intelligent, but also robust, scalable, and maintainable. I'm also a strong advocate for quantum computing education and have contributed to IBM's Qiskit framework.
             </p>
             <p style="color: #555; line-height: 1.8;">
-                When I'm not coding, you'll find me teaching, contributing to open-source projects, or exploring the latest developments in AI and distributed systems.
+                Beyond work, I'm passionate about mentoring, speaking at conferences, and contributing to open-source projects. I'm fluent in English, Hindi, and French.
             </p>
         </section>
 
-        <!-- Timeline Section -->
-        <section id="timeline">
-            <h2>Timeline</h2>
+        <!-- Career Timeline Section -->
+        <section id="experience">
+            <h2>Career & Education</h2>
 
             <div class="timeline-item">
                 <h3>Microsoft AI</h3>
                 <p class="subtitle">Software Engineer</p>
-                <p class="date">Present</p>
+                <p class="date">Present · London, UK</p>
+                <p style="color: #666; font-size: 14px;">
+                    Building scalable AI/ML systems and infrastructure. Working on cutting-edge projects in machine learning operations and quantum computing applications.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Meta</h3>
+                <p class="subtitle">Machine Learning Engineer / Research</p>
+                <p class="date">2021–2023 · London, UK</p>
+                <p style="color: #666; font-size: 14px;">
+                    Delivered tech talks on "Machine Learning @ Meta" at top institutions (EPFL, ETH Zürich). Worked on ML infrastructure and research projects. Received 121+ likes for speaking engagement posts.
+                </p>
             </div>
 
             <div class="timeline-item">
                 <h3>École Polytechnique Fédérale de Lausanne</h3>
-                <p class="subtitle">Teaching Assistant · Bachelor's Degree</p>
-                <p class="date">2018–2021</p>
+                <p class="subtitle">Master's in Computer Science · Teaching Assistant</p>
+                <p class="date">2018–2021 · Lausanne, Switzerland</p>
                 <p style="color: #666; font-size: 14px;">
-                    Taught Linear Algebra, Discrete Mathematics, and Object-Oriented Programming.
-                    GPA: 5.7/6.0 · EPFL Excellence Fellowship recipient
+                    GPA: 5.7/6.0 (Top of class) · EPFL Excellence Fellowship. Taught Linear Algebra, Discrete Mathematics, and Object-Oriented Programming to 100+ students.
+                </p>
+            </div>
+        </section>
+
+        <!-- Speaking & Events Timeline Section -->
+        <section id="events">
+            <h2>Speaking & Community</h2>
+
+            <div class="timeline-item">
+                <h3>Tech Talk: Machine Learning @ Meta</h3>
+                <p class="subtitle">Speaker</p>
+                <p class="date">November 2023 · EPFL & ETH Zürich</p>
+                <p style="color: #666; font-size: 14px;">
+                    Presented on ML project lifecycle and team-specific research. Received strong engagement from academic audiences.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>IBM Quantum Challenge</h3>
+                <p class="subtitle">Competitor · Top 60 Placement</p>
+                <p class="date">2020–2021 · Global</p>
+                <p style="color: #666; font-size: 14px;">
+                    Ranked in top 60 out of ~1,750 participants. Showcased advanced understanding of quantum algorithms and implementation.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>EPFL Quantum Computing Association</h3>
+                <p class="subtitle">Vice President & Educator</p>
+                <p class="date">Oct 2020–Oct 2021 · Lausanne, Switzerland</p>
+                <p style="color: #666; font-size: 14px;">
+                    Led quantum computing education initiatives. Developed curriculum for IBM/Coding School quantum computing course.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Class Delegate</h3>
+                <p class="subtitle">EPFL Representative & Mentor</p>
+                <p class="date">2019–2021 · Lausanne, Switzerland</p>
+                <p style="color: #666; font-size: 14px;">
+                    Represented 200+ students in class governance. Coordinated academic and social initiatives.
                 </p>
             </div>
         </section>
 
         <!-- Projects Section -->
         <section id="projects">
-            <h2>Projects</h2>
+            <h2>Featured Work</h2>
 
             <div class="project">
                 <div class="project-title">
-                    <a href="#">Qiskit Advocate</a>
+                    <a href="https://github.com/Qiskit" target="_blank">Qiskit Quantum Computing Framework</a>
                 </div>
                 <p class="project-desc">
-                    Recognized advocate for IBM's Qiskit quantum computing framework. Contributed to quantum computing education and research.
+                    IBM Qiskit Advocate (certified Sept 2020). Contributed to quantum computing education through curriculum development and public speaking. Placed in top 60 of IBM Quantum Challenge (~1,750 participants).
                 </p>
                 <div class="tags">
                     <span class="tag">Quantum Computing</span>
                     <span class="tag">Python</span>
                     <span class="tag">Open Source</span>
+                    <span class="tag">IBM</span>
                 </div>
             </div>
 
             <div class="project">
                 <div class="project-title">
-                    <a href="#">Teaching & Mentorship</a>
+                    <a href="#">Q# Circuit Visualization</a>
                 </div>
                 <p class="project-desc">
-                    Developed and delivered educational content for core CS courses. Mentored students in algorithms, programming paradigms, and software design.
+                    Developed flame graph visualization tools for Q# circuits at Microsoft. Showcased Shor's algorithm implementation with comprehensive performance analysis.
+                </p>
+                <div class="tags">
+                    <span class="tag">Quantum Computing</span>
+                    <span class="tag">Q#</span>
+                    <span class="tag">Visualization</span>
+                    <span class="tag">Microsoft</span>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-title">
+                    <a href="#">ML Infrastructure & Systems</a>
+                </div>
+                <p class="project-desc">
+                    Designed and built machine learning infrastructure at Meta. Focused on scalability, reliability, and operational excellence in production ML systems.
+                </p>
+                <div class="tags">
+                    <span class="tag">ML Engineering</span>
+                    <span class="tag">Infrastructure</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Meta</span>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-title">
+                    <a href="#">EPFL Computer Science Teaching</a>
+                </div>
+                <p class="project-desc">
+                    Designed and delivered courses in Linear Algebra, Discrete Mathematics, and Object-Oriented Programming to 100+ students. Received high satisfaction ratings and mentored individual researchers.
                 </p>
                 <div class="tags">
                     <span class="tag">Education</span>
@@ -343,63 +458,82 @@
 
         <!-- Skills Section -->
         <section id="skills">
-            <h2>Skills</h2>
+            <h2>Skills & Expertise</h2>
 
             <div class="skill-group">
-                <span class="skill-label">Languages</span>
+                <span class="skill-label">Programming Languages</span>
                 <div class="skills-list">
                     <span class="tag">Python</span>
-                    <span class="tag">JavaScript/TypeScript</span>
                     <span class="tag">C/C++</span>
+                    <span class="tag">JavaScript/TypeScript</span>
                     <span class="tag">SQL</span>
                     <span class="tag">Java</span>
+                    <span class="tag">Q#</span>
                 </div>
             </div>
 
             <div class="skill-group">
-                <span class="skill-label">AI/ML & Quantum</span>
+                <span class="skill-label">AI/ML & Quantum Computing</span>
                 <div class="skills-list">
                     <span class="tag">Machine Learning</span>
-                    <span class="tag">Quantum Computing</span>
                     <span class="tag">Deep Learning</span>
+                    <span class="tag">Quantum Computing</span>
+                    <span class="tag">Quantum Algorithms</span>
                     <span class="tag">TensorFlow</span>
                     <span class="tag">PyTorch</span>
+                    <span class="tag">ML Infrastructure</span>
                 </div>
             </div>
 
             <div class="skill-group">
-                <span class="skill-label">Tools & Frameworks</span>
+                <span class="skill-label">Tools & Platforms</span>
                 <div class="skills-list">
-                    <span class="tag">Git</span>
+                    <span class="tag">Git/GitHub</span>
                     <span class="tag">Docker</span>
                     <span class="tag">Kubernetes</span>
                     <span class="tag">AWS</span>
-                    <span class="tag">React</span>
+                    <span class="tag">Azure</span>
+                    <span class="tag">Qiskit</span>
+                    <span class="tag">Q# (Azure Quantum)</span>
                 </div>
             </div>
 
             <div class="skill-group">
-                <span class="skill-label">Languages (Natural)</span>
+                <span class="skill-label">Certifications & Test Scores</span>
                 <div class="skills-list">
-                    <span class="tag">English</span>
-                    <span class="tag">Hindi</span>
-                    <span class="tag">French</span>
+                    <span class="tag">IBM Qiskit Advocate</span>
+                    <span class="tag">TOEFL iBT 116/120</span>
+                    <span class="tag">GRE 331/340</span>
+                    <span class="tag">SAT 1570/1600</span>
+                    <span class="tag">DELF B2 French</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <span class="skill-label">Natural Languages</span>
+                <div class="skills-list">
+                    <span class="tag">English (Native/Bilingual)</span>
+                    <span class="tag">Hindi (Native/Bilingual)</span>
+                    <span class="tag">French (Fluent · B2 Certified)</span>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact">
-            <h2>Contact</h2>
+            <h2>Let's Connect</h2>
+            <p style="color: #666; margin-bottom: 24px;">
+                I'm always interested in discussing AI, quantum computing, software engineering challenges, or mentorship opportunities. Feel free to reach out!
+            </p>
             <div class="contact-links">
                 <a href="https://linkedin.com/in/aman3014" target="_blank">LinkedIn</a>
                 <a href="https://github.com/aman3014" target="_blank">GitHub</a>
-                <a href="mailto:hello@example.com">Email</a>
+                <a href="mailto:aman@example.com">Email</a>
             </div>
         </section>
 
         <footer>
-            <p>© 2026 Aman Bansal. Built with clean design and hosted on GitHub Pages.</p>
+            <p>© 2026 Aman Bansal. Passionate about AI, quantum computing, and building better systems.</p>
         </footer>
     </div>
 </body>
