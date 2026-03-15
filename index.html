@@ -12,29 +12,86 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            line-height: 1.8;
             color: #333;
             background: #fafafa;
+            font-size: 18px;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 680px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 80px 20px;
         }
 
-        /* Header / Hero */
+        /* Header */
         header {
-            margin-bottom: 80px;
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 60px;
-            align-items: start;
+            text-align: center;
+            margin-bottom: 60px;
         }
 
-        .header-content {
-            flex: 1;
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 32px;
+            font-weight: 400;
+        }
+
+        .header-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .header-links a {
+            text-decoration: none;
+            color: #0654a1;
+            font-weight: 500;
+            transition: color 0.2s;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 2px;
+        }
+
+        .header-links a:hover {
+            color: #f09228;
+            border-bottom-color: #f09228;
+        }
+
+        nav {
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #0654a1;
+        }
+
+        /* Profile Section */
+        .profile-section {
+            margin-bottom: 60px;
+            text-align: center;
         }
 
         .profile-photo {
@@ -42,212 +99,152 @@
             height: 180px;
             border-radius: 12px;
             object-fit: cover;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin: 0 auto 32px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
-        h1 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            letter-spacing: -1px;
-        }
-
-        .tagline {
-            font-size: 20px;
-            color: #666;
-            margin-bottom: 24px;
-            font-weight: 400;
+        .profile-photo:hover {
+            transform: scale(1.05);
         }
 
         .bio {
-            font-size: 16px;
             color: #555;
-            line-height: 1.8;
-            max-width: 600px;
-            margin-bottom: 32px;
+            line-height: 1.9;
+            margin-bottom: 24px;
         }
 
-        nav {
-            display: flex;
-            gap: 32px;
-            margin-top: 40px;
+        /* Quote Box */
+        .quote-box {
+            background: #f5f5f5;
+            border-left: 4px solid #0654a1;
+            padding: 24px;
+            margin: 40px 0;
+            font-style: italic;
+            color: #666;
+            line-height: 1.9;
         }
 
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            border-bottom: 2px solid transparent;
-            padding-bottom: 4px;
-            transition: border-color 0.2s;
+        /* Current Role */
+        .current-role {
+            background: #f0f4ff;
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 60px;
+            text-align: center;
         }
 
-        nav a:hover {
-            border-bottom-color: #333;
+        .current-role strong {
+            color: #0654a1;
         }
 
-        /* Sections */
+        /* News/Timeline Section */
         section {
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
 
         h2 {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 700;
             margin-bottom: 32px;
-            padding-bottom: 12px;
+            text-align: center;
+        }
+
+        .news-item {
+            margin-bottom: 32px;
+            padding-bottom: 32px;
             border-bottom: 1px solid #eee;
         }
 
-        h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .subtitle {
-            color: #666;
-            font-size: 15px;
-            margin-bottom: 12px;
-        }
-
-        .date {
-            color: #999;
-            font-size: 14px;
-            margin-bottom: 16px;
-        }
-
-        /* Projects */
-        .project {
-            margin-bottom: 40px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .project:last-child {
+        .news-item:last-child {
             border-bottom: none;
             padding-bottom: 0;
             margin-bottom: 0;
         }
 
-        .project-title {
-            display: flex;
-            align-items: baseline;
-            gap: 12px;
+        .news-date {
+            color: #0654a1;
+            font-weight: 600;
             margin-bottom: 8px;
+            font-size: 16px;
         }
 
-        .project-title a {
-            color: #333;
-            text-decoration: none;
+        .news-title {
+            font-size: 20px;
             font-weight: 600;
-            border-bottom: 1px solid #ddd;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .news-desc {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .news-desc a {
+            color: #0654a1;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
             transition: border-color 0.2s;
         }
 
-        .project-title a:hover {
-            border-bottom-color: #333;
+        .news-desc a:hover {
+            border-bottom-color: #0654a1;
         }
 
-        .project-desc {
-            color: #666;
-            margin-bottom: 12px;
-            line-height: 1.7;
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-bottom: 40px;
         }
 
-        .tags {
+        .skill-category h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #333;
+        }
+
+        .skill-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
         }
 
-        .tag {
-            display: inline-block;
+        .skill-tag {
             background: #f0f0f0;
             color: #555;
-            padding: 4px 12px;
+            padding: 6px 12px;
             border-radius: 4px;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 500;
+            transition: all 0.2s;
         }
 
-        /* Timeline */
-        .timeline-item {
-            margin-bottom: 36px;
-            padding-left: 24px;
-            position: relative;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 6px;
-            width: 12px;
-            height: 12px;
-            background: #333;
-            border-radius: 50%;
-        }
-
-        .timeline-item:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            left: 5px;
-            top: 24px;
-            width: 2px;
-            height: calc(100% + 24px);
-            background: #ddd;
-        }
-
-        /* Skills */
-        .skill-group {
-            margin-bottom: 24px;
-        }
-
-        .skill-label {
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 8px;
-            display: block;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        /* Contact */
-        .contact-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 24px;
-        }
-
-        .contact-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 2px;
-            transition: border-color 0.2s;
-        }
-
-        .contact-links a:hover {
-            border-bottom-color: #333;
+        .skill-tag:hover {
+            background: #0654a1;
+            color: white;
         }
 
         /* Footer */
         footer {
-            margin-top: 100px;
+            text-align: center;
+            margin-top: 80px;
             padding-top: 40px;
             border-top: 1px solid #eee;
-            text-align: center;
             color: #999;
             font-size: 14px;
+        }
+
+        footer a {
+            color: #0654a1;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         /* Responsive */
@@ -256,31 +253,30 @@
                 padding: 40px 16px;
             }
 
-            header {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .profile-photo {
-                width: 140px;
-                height: 140px;
-            }
-
             h1 {
                 font-size: 32px;
             }
 
-            .tagline {
-                font-size: 16px;
+            h2 {
+                font-size: 24px;
             }
 
             nav {
-                flex-direction: column;
+                gap: 16px;
+                padding: 16px 0;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .header-links {
                 gap: 16px;
             }
 
-            h2 {
-                font-size: 20px;
+            body {
+                font-size: 16px;
             }
         }
     </style>
@@ -288,252 +284,166 @@
 <body>
     <div class="container">
         <header>
-            <div class="header-content">
-                <h1>Aman Bansal</h1>
-                <p class="tagline">Building AI Systems · Quantum Computing · ML Engineering</p>
-                <p class="bio">
-                    I design and build scalable AI/ML systems at Microsoft. With a background from EPFL and experience spanning quantum computing, ML infrastructure, and full-stack engineering, I'm passionate about pushing the boundaries of what's possible with AI. Previously contributed to cutting-edge research at Meta, and I'm deeply invested in education and mentorship.
-                </p>
-                <nav>
-                    <a href="#about">About</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </div>
-            <img src="dp.jpg" alt="Aman Bansal" class="profile-photo" loading="lazy">
-        </header>
-
-        <!-- About Section -->
-        <section id="about">
-            <h2>About</h2>
-            <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">
-                I'm a software engineer based in London with a deep passion for AI/ML systems and quantum computing. My journey started at <strong>EPFL</strong>, where I graduated with distinction (GPA: 5.7/6.0) and was awarded the <strong>EPFL Excellence Fellowship</strong>. Since then, I've worked on high-impact projects at Meta and Microsoft, focusing on machine learning infrastructure, quantum algorithms, and scalable system design.
-            </p>
-            <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">
-                I'm particularly interested in the intersection of software engineering and AI—how to build systems that are not just intelligent, but also robust, scalable, and maintainable. I'm also a strong advocate for quantum computing education and have contributed to IBM's Qiskit framework.
-            </p>
-            <p style="color: #555; line-height: 1.8;">
-                Beyond work, I'm passionate about mentoring, speaking at conferences, and contributing to open-source projects. I'm fluent in English, Hindi, and French.
-            </p>
-        </section>
-
-        <!-- Career Timeline Section -->
-        <section id="experience">
-            <h2>Career & Education</h2>
-
-            <div class="timeline-item">
-                <h3>Microsoft AI</h3>
-                <p class="subtitle">Software Engineer</p>
-                <p class="date">Present · London, UK</p>
-                <p style="color: #666; font-size: 14px;">
-                    Building scalable AI/ML systems and infrastructure. Working on cutting-edge projects in machine learning operations and quantum computing applications.
-                </p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>Meta</h3>
-                <p class="subtitle">Machine Learning Engineer / Research</p>
-                <p class="date">2021–2023 · London, UK</p>
-                <p style="color: #666; font-size: 14px;">
-                    Delivered tech talks on "Machine Learning @ Meta" at top institutions (EPFL, ETH Zürich). Worked on ML infrastructure and research projects. Received 121+ likes for speaking engagement posts.
-                </p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>École Polytechnique Fédérale de Lausanne</h3>
-                <p class="subtitle">Master's in Computer Science · Teaching Assistant</p>
-                <p class="date">2018–2021 · Lausanne, Switzerland</p>
-                <p style="color: #666; font-size: 14px;">
-                    GPA: 5.7/6.0 (Top of class) · EPFL Excellence Fellowship. Taught Linear Algebra, Discrete Mathematics, and Object-Oriented Programming to 100+ students.
-                </p>
-            </div>
-        </section>
-
-        <!-- Speaking & Events Timeline Section -->
-        <section id="events">
-            <h2>Speaking & Community</h2>
-
-            <div class="timeline-item">
-                <h3>Tech Talk: Machine Learning @ Meta</h3>
-                <p class="subtitle">Speaker</p>
-                <p class="date">November 2023 · EPFL & ETH Zürich</p>
-                <p style="color: #666; font-size: 14px;">
-                    Presented on ML project lifecycle and team-specific research. Received strong engagement from academic audiences.
-                </p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>IBM Quantum Challenge</h3>
-                <p class="subtitle">Competitor · Top 60 Placement</p>
-                <p class="date">2020–2021 · Global</p>
-                <p style="color: #666; font-size: 14px;">
-                    Ranked in top 60 out of ~1,750 participants. Showcased advanced understanding of quantum algorithms and implementation.
-                </p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>EPFL Quantum Computing Association</h3>
-                <p class="subtitle">Vice President & Educator</p>
-                <p class="date">Oct 2020–Oct 2021 · Lausanne, Switzerland</p>
-                <p style="color: #666; font-size: 14px;">
-                    Led quantum computing education initiatives. Developed curriculum for IBM/Coding School quantum computing course.
-                </p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>Class Delegate</h3>
-                <p class="subtitle">EPFL Representative & Mentor</p>
-                <p class="date">2019–2021 · Lausanne, Switzerland</p>
-                <p style="color: #666; font-size: 14px;">
-                    Represented 200+ students in class governance. Coordinated academic and social initiatives.
-                </p>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Featured Work</h2>
-
-            <div class="project">
-                <div class="project-title">
-                    <a href="https://github.com/Qiskit" target="_blank">Qiskit Quantum Computing Framework</a>
-                </div>
-                <p class="project-desc">
-                    IBM Qiskit Advocate (certified Sept 2020). Contributed to quantum computing education through curriculum development and public speaking. Placed in top 60 of IBM Quantum Challenge (~1,750 participants).
-                </p>
-                <div class="tags">
-                    <span class="tag">Quantum Computing</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">Open Source</span>
-                    <span class="tag">IBM</span>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="project-title">
-                    <a href="#">Q# Circuit Visualization</a>
-                </div>
-                <p class="project-desc">
-                    Developed flame graph visualization tools for Q# circuits at Microsoft. Showcased Shor's algorithm implementation with comprehensive performance analysis.
-                </p>
-                <div class="tags">
-                    <span class="tag">Quantum Computing</span>
-                    <span class="tag">Q#</span>
-                    <span class="tag">Visualization</span>
-                    <span class="tag">Microsoft</span>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="project-title">
-                    <a href="#">ML Infrastructure & Systems</a>
-                </div>
-                <p class="project-desc">
-                    Designed and built machine learning infrastructure at Meta. Focused on scalability, reliability, and operational excellence in production ML systems.
-                </p>
-                <div class="tags">
-                    <span class="tag">ML Engineering</span>
-                    <span class="tag">Infrastructure</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">Meta</span>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="project-title">
-                    <a href="#">EPFL Computer Science Teaching</a>
-                </div>
-                <p class="project-desc">
-                    Designed and delivered courses in Linear Algebra, Discrete Mathematics, and Object-Oriented Programming to 100+ students. Received high satisfaction ratings and mentored individual researchers.
-                </p>
-                <div class="tags">
-                    <span class="tag">Education</span>
-                    <span class="tag">Mentoring</span>
-                    <span class="tag">Computer Science</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>Skills & Expertise</h2>
-
-            <div class="skill-group">
-                <span class="skill-label">Programming Languages</span>
-                <div class="skills-list">
-                    <span class="tag">Python</span>
-                    <span class="tag">C/C++</span>
-                    <span class="tag">JavaScript/TypeScript</span>
-                    <span class="tag">SQL</span>
-                    <span class="tag">Java</span>
-                    <span class="tag">Q#</span>
-                </div>
-            </div>
-
-            <div class="skill-group">
-                <span class="skill-label">AI/ML & Quantum Computing</span>
-                <div class="skills-list">
-                    <span class="tag">Machine Learning</span>
-                    <span class="tag">Deep Learning</span>
-                    <span class="tag">Quantum Computing</span>
-                    <span class="tag">Quantum Algorithms</span>
-                    <span class="tag">TensorFlow</span>
-                    <span class="tag">PyTorch</span>
-                    <span class="tag">ML Infrastructure</span>
-                </div>
-            </div>
-
-            <div class="skill-group">
-                <span class="skill-label">Tools & Platforms</span>
-                <div class="skills-list">
-                    <span class="tag">Git/GitHub</span>
-                    <span class="tag">Docker</span>
-                    <span class="tag">Kubernetes</span>
-                    <span class="tag">AWS</span>
-                    <span class="tag">Azure</span>
-                    <span class="tag">Qiskit</span>
-                    <span class="tag">Q# (Azure Quantum)</span>
-                </div>
-            </div>
-
-            <div class="skill-group">
-                <span class="skill-label">Certifications & Test Scores</span>
-                <div class="skills-list">
-                    <span class="tag">IBM Qiskit Advocate</span>
-                    <span class="tag">TOEFL iBT 116/120</span>
-                    <span class="tag">GRE 331/340</span>
-                    <span class="tag">SAT 1570/1600</span>
-                    <span class="tag">DELF B2 French</span>
-                </div>
-            </div>
-
-            <div class="skill-group">
-                <span class="skill-label">Natural Languages</span>
-                <div class="skills-list">
-                    <span class="tag">English (Native/Bilingual)</span>
-                    <span class="tag">Hindi (Native/Bilingual)</span>
-                    <span class="tag">French (Fluent · B2 Certified)</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Let's Connect</h2>
-            <p style="color: #666; margin-bottom: 24px;">
-                I'm always interested in discussing AI, quantum computing, software engineering challenges, or mentorship opportunities. Feel free to reach out!
-            </p>
-            <div class="contact-links">
+            <h1>Aman Bansal</h1>
+            <p class="tagline">Software Engineer · AI/ML Systems</p>
+            <div class="header-links">
                 <a href="https://linkedin.com/in/aman3014" target="_blank">LinkedIn</a>
                 <a href="https://github.com/aman3014" target="_blank">GitHub</a>
                 <a href="mailto:aman@example.com">Email</a>
             </div>
+        </header>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#news">News</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+        </nav>
+
+        <section class="profile-section" id="about">
+            <img src="dp.jpg" alt="Aman Bansal" class="profile-photo">
+            <p class="bio">
+                I'm a software engineer at <strong>Microsoft AI</strong>, building scalable machine learning systems and quantum computing applications. I graduated from <strong>EPFL</strong> with distinction (GPA 5.7/6.0) and was awarded the <strong>EPFL Excellence Fellowship</strong>.
+            </p>
+            <p class="bio">
+                My work spans AI/ML infrastructure, quantum algorithms, and full-stack engineering. I'm passionate about making complex systems accessible and have experience mentoring and speaking at leading institutions.
+            </p>
+        </section>
+
+        <div class="current-role">
+            <p>Currently building the future of AI/ML at <strong>Microsoft AI</strong> in London. Always interested in discussing quantum computing, ML infrastructure, and mentorship opportunities.</p>
+        </div>
+
+        <section id="news">
+            <h2>News & Updates</h2>
+
+            <div class="news-item">
+                <div class="news-date">March 2026</div>
+                <div class="news-title">Personal Portfolio Launched</div>
+                <div class="news-desc">
+                    Launched a new portfolio site to showcase work in AI/ML systems, quantum computing, and engineering projects.
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-date">November 2023</div>
+                <div class="news-title">Tech Talk at EPFL & ETH Zürich</div>
+                <div class="news-desc">
+                    Delivered talk on "Machine Learning @ Meta" to audiences at top Swiss institutions. <strong>121+ engagement</strong> on announcement post.
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-date">2021</div>
+                <div class="news-title">IBM Qiskit Advocate</div>
+                <div class="news-desc">
+                    Recognized as <a href="https://github.com/Qiskit" target="_blank">IBM Qiskit Advocate</a> for contributions to quantum computing education and research. Placed in <strong>top 60 of ~1,750 participants</strong> in IBM Quantum Challenge.
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-date">2021</div>
+                <div class="news-title">EPFL Excellence Fellowship</div>
+                <div class="news-desc">
+                    Graduated from <strong>EPFL</strong> with Master's degree in Computer Science. Awarded Excellence Fellowship for academic performance and research contributions. GPA: <strong>5.7/6.0</strong> (Top of class).
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-date">2020–2021</div>
+                <div class="news-title">Vice President, EPFL Quantum Computing Association</div>
+                <div class="news-desc">
+                    Led quantum computing education initiatives. Developed curriculum for IBM/Coding School quantum computing course reaching 100+ students.
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-date">2018–2021</div>
+                <div class="news-title">Teaching Assistant at EPFL</div>
+                <div class="news-desc">
+                    Taught Linear Algebra, Discrete Mathematics, and Object-Oriented Programming to 100+ students. Mentored individual researchers and developed course materials.
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+
+            <div class="news-item">
+                <div class="news-title">Microsoft AI</div>
+                <div class="news-date">Software Engineer · London, UK</div>
+                <div class="news-desc">
+                    Building scalable AI/ML systems and infrastructure. Working on quantum computing applications and ML operations.
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-title">Meta</div>
+                <div class="news-date">Machine Learning Engineer · London, UK</div>
+                <div class="news-desc">
+                    Designed and built ML infrastructure. Spoke at top institutions about ML project lifecycle and research.
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-title">EPFL</div>
+                <div class="news-date">Master's in Computer Science · Lausanne, Switzerland</div>
+                <div class="news-desc">
+                    Graduated with distinction (5.7/6.0). EPFL Excellence Fellowship recipient. Teaching Assistant for core CS courses.
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Q#</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>AI/ML & Quantum</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Quantum Computing</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">English</span>
+                        <span class="skill-tag">Hindi</span>
+                        <span class="skill-tag">French</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <footer>
-            <p>© 2026 Aman Bansal. Passionate about AI, quantum computing, and building better systems.</p>
+            <p>© 2026 Aman Bansal · Passionate about AI, quantum computing, and building better systems.</p>
         </footer>
     </div>
 </body>
